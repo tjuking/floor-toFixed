@@ -1,5 +1,7 @@
 /**
+ * floor-tofixed.js v0.1
  * 向下保留数值，保留指定位数的小数，可以设置整数部分每三位的分隔符
+ * @author tjuking https://github.com/tjuking/floor-toFixed
  * @param amount {string|number} 传入的数值
  * @param [decimal] {number} 保留小数位
  * @param [separator] {string} 分隔符
