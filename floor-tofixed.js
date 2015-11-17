@@ -158,7 +158,7 @@ function floorToFixed(amount, decimal, separator) {
         //初始化空数组
         withSepIntegerArr = [];
         for (i = 0; i < integerArrLength; i++) {
-            //每三位添加分隔符，最后一位不添加
+            //每三位添加分隔符，第一位和最后一位不添加
             if (i % 3 === integerArrLength % 3 && i !== integerArrLength - 1 && i !== 0) {
                 withSepIntegerArr.push(separator);
             }
