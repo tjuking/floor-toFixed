@@ -12,6 +12,9 @@ describe("floorToFixed", function () {
         it("正整数字符串处理", function () {
             assert.equal(floorToFixed("1"), "1.00");
         });
+        it("带前后空格字符串处理", function () {
+            assert.equal(floorToFixed("  122 4211 9664  "), "12,242,119,664.00");
+        });
         it("4位正整数字符串处理", function () {
             assert.equal(floorToFixed("2999"), "2,999.00");
         });
@@ -98,6 +101,9 @@ describe("floorToFixed", function () {
         });
         it("传入逗号','", function () {
             assert.equal(floorToFixed("-4273783928.99999", 3, ","), "-4,273,783,929.000");
+        });
+        it("手机号码去空格", function () {
+            assert.equal(floorToFixed("  122 4211 9664  ", 0, ""), "12242119664");
         });
     });
 
